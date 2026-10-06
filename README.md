@@ -37,9 +37,17 @@ python main.py
 
 ![Evaluation results](evaluation_results.png)
 
+
 ## My Contribution
 
-<!-- Aman: write 3-4 lines here on exactly what YOU did (e.g. data preprocessing, model tuning, analysis, writing). Recruiters read this part. -->
+- Studied the biological background of gut dysbiosis and autoimmune diseases and wrote the Introduction and Discussion of the project report
+- Worked on [data preparation / running and comparing XGBoost, LightGBM, CatBoost and the Soft Voting Ensemble]
+- Interpreted the feature-importance results (e.g. Clostridium, Fusobacterium) in the context of immune regulation and gut microbiota
+- Co-authored the final project report with my teammate Mohammad Younus under the supervision of Dr. Hira Javed, Jamia Hamdard
+
+## Dataset
+
+Data from An et al. (2025), "Gut microbiota analysis reveals microbial signature for multi-autoimmune diseases based on machine learning model", Frontiers in Microbiology, 16. https://doi.org/10.3389/fmicb.2025.1660775
 
 ## Team
 
