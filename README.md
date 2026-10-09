@@ -4,6 +4,13 @@ Gut microbiome–based classification of 11 phenotypic classes (10 autoimmune co
 
 *Internship project, Jamia Hamdard (MCAI).*
 
+
+**Authors:**
+- Aman Zehra, M.Sc. Biotechnology, Department of Biotechnology, Jamia Hamdard
+- Mohammad Younus, B.Tech Computer Science Engineering, Jamia Hamdard
+
+**Supervisor:** Dr. Hira Javed, School of Engineering Sciences and Technology, Jamia Hamdard
+**Programme:** Internship at the Multidisciplinary Centre for Artificial Intelligence (MCAI), Jamia Hamdard, New Delhi
 ## Project Overview
 
 Dysbiosis of the gut microbiota is closely linked to immune dysregulation and autoimmune disease. Instead of single-disease comparisons, this project builds one unified model that distinguishes many autoimmune disorders at once, using genus-level microbial abundance profiles.
@@ -13,6 +20,27 @@ Dysbiosis of the gut microbiota is closely linked to immune dysregulation and au
 - **Models compared:** XGBoost, LightGBM, CatBoost, Soft Voting Ensemble
 - **Tuning:** Optuna hyperparameter optimisation with stratified 5-fold CV
 - **Output:** Evaluation plots and feature-importance analysis to identify key discriminating taxa
+
+- ## Data source
+The genus-level abundance matrix (1,955 samples, 423 genera, 11 classes) comes from a published, publicly available dataset:
+An, T., Zhang, S., Li, J., et al. (2025). *Gut microbiota analysis reveals microbial signature for multi-autoimmune diseases based on machine learning model.* Frontiers in Microbiology, 16, 1660775. https://doi.org/10.3389/fmicb.2025.1660775
+
+This repository reuses that data for an independent modelling exercise; all credit for the data belongs to the original authors.
+
+## Performance (hold-out test set)
+
+| Model | Accuracy | F1-score | ROC-AUC |
+|---|---|---|---|
+| LightGBM | 0.612 | 0.573 | 0.867 |
+| CatBoost | 0.588 | 0.537 | 0.858 |
+| XGBoost | **0.629** | **0.600** | 0.871 |
+| Soft Voting Ensemble | 0.605 | 0.565 | **0.873** |
+
+Eleven-class classification is a hard problem: accuracy is moderate, while ROC-AUC above 0.85 for all models shows good class discrimination. *Clostridium* had the highest feature importance in XGBoost.
+
+## Citation
+If you use this code, please cite this repository and the original data paper above.
+
 
 ## Repository Structure
 
